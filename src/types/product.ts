@@ -6,6 +6,7 @@ export interface Product {
   slug: string;
   description: string;
   composition: string[];
+  image: string;
   partnerPrice: number;
   currency: string;
   tags: string[];

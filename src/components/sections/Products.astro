@@ -1,5 +1,5 @@
 ---
-import { products, formatPrice } from '../../lib/products';
+import { products, formatPrice, assetUrl } from '../../lib/products';
 ---
 
 <section id="products" class="bg-earth-100">
@@ -10,18 +10,26 @@ import { products, formatPrice } from '../../lib/products';
     <div class="mt-10 grid gap-6 md:grid-cols-3">
       {
         products.map((product) => (
-          <article class="card flex flex-col">
-            <p class="text-sm font-semibold uppercase tracking-wide text-earth-700">{product.name}</p>
-            <h3 class="mt-2 text-xl font-semibold text-forest-900">{product.description}</h3>
-            <p class="mt-4 text-sm text-forest-900/70">
-              {product.composition.join(' + ')}
-            </p>
-            <p class="mt-6 text-lg font-semibold text-forest-900">
-              {formatPrice(product.partnerPrice, product.currency)} для партнёра
-            </p>
-            <a href="#pilot" class="btn-secondary mt-auto pt-8">
-              Запросить состав
-            </a>
+          <article class="card flex flex-col overflow-hidden p-0">
+            <img
+              src={assetUrl(product.image)}
+              alt={`${product.name}: ${product.composition.join(', ')}`}
+              class="aspect-[4/5] w-full object-cover"
+              loading="lazy"
+            />
+            <div class="flex flex-1 flex-col p-6">
+              <p class="text-sm font-semibold uppercase tracking-wide text-earth-700">{product.name}</p>
+              <h3 class="mt-2 text-xl font-semibold text-forest-900">{product.description}</h3>
+              <p class="mt-4 text-sm text-forest-900/70">
+                {product.composition.join(' + ')}
+              </p>
+              <p class="mt-6 text-lg font-semibold text-forest-900">
+                {formatPrice(product.partnerPrice, product.currency)} для партнёра
+              </p>
+              <a href="#pilot" class="btn-secondary mt-auto pt-8">
+                Запросить состав
+              </a>
+            </div>
           </article>
         ))
       }

@@ -1,7 +1,8 @@
 ---
 import { site } from '../../lib/site';
 
-const contactTelegram = site.contact.telegram || 'https://t.me/your_username';
+const contactTelegram = site.contact.telegram;
+const telegramHandle = site.contact.telegramHandle ?? '@viktorkyz';
 ---
 
 <section id="pilot" class="bg-gradient-to-br from-forest-700 to-earth-700 text-white">
@@ -37,11 +38,18 @@ const contactTelegram = site.contact.telegram || 'https://t.me/your_username';
         </ul>
 
         <div class="mt-8 space-y-3">
-          <a href={contactTelegram} class="btn-primary w-full">
+          <a
+            href={contactTelegram}
+            class="btn-primary w-full"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Написать в Telegram
           </a>
-          <p class="text-sm text-forest-900/60">
-            Заполните контакты в `src/data/site.json`, чтобы кнопка вела на ваш аккаунт.
+          <p class="text-center text-sm text-forest-900/70">
+            <a href={contactTelegram} class="font-medium text-forest-700 hover:underline" target="_blank" rel="noopener noreferrer">
+              {telegramHandle}
+            </a>
           </p>
         </div>
       </div>
