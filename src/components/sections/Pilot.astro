@@ -1,0 +1,50 @@
+---
+import { site } from '../../lib/site';
+
+const contactTelegram = site.contact.telegram || 'https://t.me/your_username';
+---
+
+<section id="pilot" class="bg-gradient-to-br from-forest-700 to-earth-700 text-white">
+  <div class="mx-auto max-w-6xl px-4 py-20">
+    <div class="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
+      <div>
+        <h2 class="text-3xl font-semibold md:text-4xl">Предложение для партнёра</h2>
+        <p class="mt-4 max-w-2xl text-lg text-white/85">
+          Начать с тестовой партии — без долгосрочных обязательств.
+        </p>
+
+        <div class="mt-8 card border-white/20 bg-white/10 text-white">
+          <p class="text-sm uppercase tracking-wide text-white/70">Пилот</p>
+          <h3 class="mt-2 text-2xl font-semibold">50–100 боксов</h3>
+          <ul class="mt-6 space-y-3 text-white/85">
+            <li>• согласовать состав и целевую цену</li>
+            <li>• провести 1–2 тестовых тура</li>
+            <li>• собрать отзывы туристов и гидов</li>
+            <li>• посчитать фактическую маржу</li>
+            <li>• после теста перейти на регулярные поставки</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card text-forest-900">
+        <h3 class="text-xl font-semibold">Что обсуждаем</h3>
+        <ul class="mt-6 space-y-3 text-forest-900/80">
+          <li>• состав</li>
+          <li>• цена</li>
+          <li>• объём</li>
+          <li>• брендирование</li>
+          <li>• график поставок</li>
+        </ul>
+
+        <div class="mt-8 space-y-3">
+          <a href={contactTelegram} class="btn-primary w-full">
+            Написать в Telegram
+          </a>
+          <p class="text-sm text-forest-900/60">
+            Заполните контакты в `src/data/site.json`, чтобы кнопка вела на ваш аккаунт.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

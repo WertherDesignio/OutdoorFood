@@ -1,0 +1,38 @@
+[
+  {
+    "id": "classic",
+    "name": "Classic",
+    "slug": "classic",
+    "description": "Понятный и доступный формат",
+    "composition": ["сухофрукты", "морковь", "печенье"],
+    "partnerPrice": 2000,
+    "currency": "AMD",
+    "tags": ["standard"],
+    "available": true,
+    "cta": "request_quote"
+  },
+  {
+    "id": "energy",
+    "name": "Energy",
+    "slug": "energy",
+    "description": "Больше акцента на энергии в пути",
+    "composition": ["сухофрукты", "овощи", "печенье"],
+    "partnerPrice": 2000,
+    "currency": "AMD",
+    "tags": ["energy"],
+    "available": true,
+    "cta": "request_quote"
+  },
+  {
+    "id": "fresh",
+    "name": "Fresh",
+    "slug": "fresh",
+    "description": "Свежий и более яркий вариант",
+    "composition": ["миндаль", "мармелад", "томаты"],
+    "partnerPrice": 2000,
+    "currency": "AMD",
+    "tags": ["premium"],
+    "available": true,
+    "cta": "request_quote"
+  }
+]

@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest-50: #f3f7f2;
+  --color-forest-100: #e4ede1;
+  --color-forest-600: #3f6b45;
+  --color-forest-700: #335538;
+  --color-forest-900: #1f3424;
+  --color-earth-100: #f6eee4;
+  --color-earth-500: #b56b3a;
+  --color-earth-700: #8c4f28;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-forest-50 text-forest-900 antialiased;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight text-forest-900 md:text-4xl;
+}
+
+.section-lead {
+  @apply mt-4 max-w-3xl text-lg text-forest-900/75;
+}
+
+.card {
+  @apply rounded-2xl border border-forest-900/10 bg-white p-6 shadow-sm;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-forest-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-forest-600;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-forest-700/20 bg-white px-6 py-3 text-sm font-semibold text-forest-700 transition hover:border-forest-700/40 hover:bg-forest-50;
+}

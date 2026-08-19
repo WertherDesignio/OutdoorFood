@@ -1,0 +1,33 @@
+---
+import { site } from '../../lib/site';
+
+const nav = [
+  { href: '#benefits', label: 'Зачем' },
+  { href: '#products', label: 'Линейка' },
+  { href: '#pricing', label: 'Экономика' },
+  { href: '#process', label: 'Как работаем' },
+  { href: '#pilot', label: 'Пилот' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-forest-900/10 bg-forest-50/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+    <a href={import.meta.env.BASE_URL} class="text-lg font-semibold text-forest-900">
+      {site.brand}
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm text-forest-900/80 md:flex">
+      {
+        nav.map((item) => (
+          <a href={item.href} class="transition hover:text-forest-700">
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a href="#pilot" class="btn-primary text-sm">
+      Запросить пилот
+    </a>
+  </div>
+</header>

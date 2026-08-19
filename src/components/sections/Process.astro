@@ -1,0 +1,63 @@
+---
+import { site } from '../../lib/site';
+---
+
+<section id="process" class="bg-forest-100">
+  <div class="mx-auto max-w-6xl px-4 py-20">
+    <h2 class="section-title">Простая схема сотрудничества</h2>
+    <p class="section-lead">
+      Для партнёра главное: не создавать новый процесс, а просто добавить один понятный SKU в существующий тур.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-4">
+      {
+        site.process.map((step) => (
+          <article class="card">
+            <p class="text-sm font-semibold text-earth-700">{step.step}</p>
+            <h3 class="mt-2 text-xl font-semibold">{step.title}</h3>
+            <p class="mt-4 text-forest-900/75">{step.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 py-20">
+  <h2 class="section-title">Продукт можно адаптировать под партнёра</h2>
+  <ul class="mt-8 grid gap-4 md:grid-cols-2">
+    {
+      site.customization.map((item) => (
+        <li class="card flex items-start gap-3">
+          <span class="mt-1 text-forest-700">✓</span>
+          <span>{item}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<section class="bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-20">
+    <h2 class="section-title">Почему формат подходит outdoor-рынку Армении</h2>
+    <ul class="section-lead list-disc space-y-2 pl-5">
+      <li>Однодневные hiking и jeep-туры регулярно включают lunch / picnic как часть продукта.</li>
+      <li>На рынке есть туры по горам и природным маршрутам, где питание уже является отдельной ценностью.</li>
+      <li>Цена тура значительно выше стоимости перекуса — небольшой апгрейд сервиса легко встроить в пакет.</li>
+    </ul>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {
+        site.marketExamples.map((example) => (
+          <article class="card bg-forest-50">
+            <h3 class="text-xl font-semibold">{example.name}</h3>
+            <p class="mt-3 text-forest-900/75">{example.price}</p>
+          </article>
+        ))
+      }
+    </div>
+    <p class="mt-6 text-sm text-forest-900/60">
+      Примечание: цифры — цены туров, а не себестоимость ланч-бокса.
+    </p>
+  </div>
+</section>
